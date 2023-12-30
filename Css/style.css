@@ -395,6 +395,7 @@ section:nth-child(even){
         text-align: center;
         width: 250px;
         margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .about-img{
@@ -412,7 +413,7 @@ section:nth-child(even){
 
 @media screen and (min-width: 1023px) and (max-width: 1439px) {
     .about-img img {
-        height: 325px;
+        height: 285px;
         width: auto;
         border: 15px solid var(--border-img-color);
     }
