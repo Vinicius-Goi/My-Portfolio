@@ -29,6 +29,7 @@ function changeTheme(){
         root.style.setProperty('--moon-visible', 'hidden');
         root.style.setProperty('--trilho-color', '#b1b1b1');
         root.style.setProperty('--bar-color', '#d6d6d6');
+        root.style.setProperty('--other-bg-color', '#e0e0e0');
         
     }else{
         root.style.setProperty('--bg-color', '#3F3F3F');
@@ -41,6 +42,7 @@ function changeTheme(){
         root.style.setProperty('--moon-visible', 'visible');
         root.style.setProperty('--trilho-color', '#353535');
         root.style.setProperty('--bar-color', '#474747');
+        root.style.setProperty('--other-bg-color', '#313131');
     }
 }
 

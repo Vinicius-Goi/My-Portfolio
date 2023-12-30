@@ -9,6 +9,7 @@
     --moon-visible: hidden;
     --trilho-color: #a0a0a0;
     --bar-color: #bbbbbb;
+    --other-bg-color: #e0e0e0;
 }
 
 *{
@@ -303,6 +304,7 @@ main p#summary{
 
 section{
     height: 100dvh;
+    color: var(--str-color);
 }
 
 header{
@@ -310,8 +312,12 @@ header{
     z-index: 1;
 }
 
-.about{
-    background: #313131;
+section:nth-child(even){
+    background: var(--other-bg-color);
+}
+
+.about h1{
+
 }
 
 @media screen and (max-width: 1023px) {
