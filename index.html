@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Vinícius Goi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" onclick="mobileMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="redes">
+                <div class="git">
+                    <button id="git" onclick=irGitHub()></button>
+                </div>
+                <div class="insta">
+                    <button id="insta" onclick=irInsta()></button>
+                </div>
+                <div class="linkedin">
+                    <button id="linkedin" onclick=irLinkedin()></button>
+                </div>
+                </div>
+            <div class="nav-menu">
+                <a href target="#home">Home</a>
+                <a href target="#about">About</a>
+                <a href target="#projects">Projects</a>
+                <a href target="#blog">Blog</a>
+                <a href target="#contact">Contact</a>
+            </div>
+            <div class="nav-language">
+                <a>EN</a>
+                <a>PT-BR</a>
+            </div>
+            <div class="nav-switch-theme">
+                <label>
+                    <input type="checkbox" id="switch-theme" onclick="changeTheme()">
+                    <span>
+                        <i></i>
+                        <img class="sun" src="src/sun.svg">
+                        <img class="moon" src="src/moon.svg">
+                </span>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <menu id="menuMobile">
+        <div class="menu-language">
+            <a>EN</a>
+            <a>PT-BR</a>
+        </div>
+        <a href target="#home">Home</a>
+        <a href target="#about">About</a>
+        <a href target="#projects">Projects</a>
+        <a href target="#blog">Blog</a>
+        <a href target="#contact">Contact</a>
+    </menu>
+    <main>
+        <section id="home" class="home">
+        <div class="container">
+            <p>Hi 🖖, I'm</p>
+            <h1>Vinícius Goi Sanchez!</h1>
+            <p id="summary">I'm a web programmer and fascinated by hardware and software, as well as a great love for design and languages.</p>
+        </section>
+        </div>
+        <section id="about" class="about">
+            
+        </section>
+    </main>
+    <footer id="rodape">
+        <p>&copy; 2024 Vinícius Goi Sanchez.</p>
+    </footer>
+</body>
+<script src="Js/script.js"></script>
+</html>
