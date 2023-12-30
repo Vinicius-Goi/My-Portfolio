@@ -410,3 +410,10 @@ section:nth-child(even){
 
 }
 
+@media screen and (min-width: 1023px) and (max-width: 1439px) {
+    .about-img img {
+        height: 325px;
+        width: auto;
+        border: 15px solid var(--border-img-color);
+    }
+}
