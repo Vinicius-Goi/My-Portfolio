@@ -2,6 +2,7 @@ var checkbox = document.getElementById('switch-theme');
 var clickbuttonG = document.getElementById('git');
 var clickbuttonI = document.getElementById('insta');
 var clickbuttonL = document.getElementById('linkedin');
+var clickbuttonL = document.getElementById('seta');
 
 checkbox.addEventListener('change', function() {
     localStorage.setItem('checkboxState', checkbox.checked);
@@ -31,6 +32,7 @@ function changeTheme(){
         root.style.setProperty('--bar-color', '#d6d6d6');
         root.style.setProperty('--other-bg-color', '#e0e0e0');
         root.style.setProperty('--border-img-color', '#BDBDBD');
+        root.style.setProperty('--arrow-down', 'url("../src/arrow_down.svg")');
         
     }else{
         root.style.setProperty('--bg-color', '#3F3F3F');
@@ -45,6 +47,7 @@ function changeTheme(){
         root.style.setProperty('--bar-color', '#474747');
         root.style.setProperty('--other-bg-color', '#313131');
         root.style.setProperty('--border-img-color', '#4E4E4E');
+        root.style.setProperty('--arrow-down', 'url("../src/arrow_down_white.svg")');
     }
 }
 
@@ -60,6 +63,11 @@ clickbuttonL.addEventListener('click', function irLinkedin(){
     window.open('https://www.linkedin.com/in/vin%C3%ADcius-goi-sanchez-b33209296/', '_blank');
 });
 
+function irSeta() {
+    var aboutSection = document.getElementById("about");
+    
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     var menuIcon = document.querySelector('.menu-icon');
