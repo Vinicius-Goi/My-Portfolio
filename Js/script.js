@@ -77,6 +77,23 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollLinks = document.querySelectorAll('.scroll-link');
+
+    scrollLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            var targetId = this.getAttribute('data-target');
+            var targetSection = document.getElementById(targetId);
+
+            targetSection.scrollIntoView({ behavior: "smooth" });
+
+            menuMobile.style.display = 'none';
+        });
+    });
+});
+
 function mobileMenu() {
 
     if (menuMobile.style.display == 'block'){
