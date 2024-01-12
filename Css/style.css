@@ -273,6 +273,10 @@ menu a {
     font-size: 30px;
 }
 
+.text {
+    padding: 150px;
+}
+
 .container h1{
     font-size: 40px;
 }
@@ -281,6 +285,19 @@ menu a {
     font-family: 'Monteserrat', sans-serif;
     color: var(--str-color);
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.home {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 footer{
@@ -295,13 +312,6 @@ footer{
 
 main p#summary{
     width: 900px;
-}
-
-.home{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
 }
 
 section{
@@ -350,12 +360,14 @@ section:nth-child(even){
     text-align: right;
 }
 
+
+
 .arrow{
     width: 100px;
     height: 100px;
-    position: absolute;
-    left: 50%;
-    top: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow-down{
