@@ -61,18 +61,18 @@ a{
     transition: 0.4s;
 }
 
-.menu-icon.active .bar:nth-child(1) {
+.menu-icon.active.transform .bar:nth-child(1) {
     transform: rotate(-45deg);
     position: absolute;
     left: 20px;
     top: 31px;
 }
 
-.menu-icon.active .bar:nth-child(2) {
+.menu-icon.active.transform .bar:nth-child(2) {
     opacity: 0;
 }
 
-.menu-icon.active .bar:nth-child(3) {
+.menu-icon.active.transform .bar:nth-child(3) {
     transform: rotate(45deg);
     position: absolute;
     left: 20px;
