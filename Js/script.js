@@ -100,6 +100,10 @@ function mobileMenu() {
 
     menuIcon.classList.toggle('active');
     menuMobile.style.display = (menuMobile.style.display === 'block') ? 'none' : 'block';
+    
+    setTimeout(function () {
+        menuIcon.classList.toggle('transform');
+    }, 10);
 }
 
 
