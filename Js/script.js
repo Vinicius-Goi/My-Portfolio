@@ -95,10 +95,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function mobileMenu() {
+    var menuMobile = document.getElementById('menuMobile');
+    var menuIcon = document.querySelector('.menu-icon');
 
-    if (menuMobile.style.display == 'block'){
-        menuMobile.style.display = 'none';
-    }else{
+    if (menuMobile.style.display === 'block' && menuIcon.classList.contains('active')){
         menuMobile.style.display = 'block';
+    }else{
+        menuMobile.style.display = 'none';
     }
 };
