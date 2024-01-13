@@ -418,9 +418,9 @@ section:nth-child(even){
 }
 
 @media screen and (max-width: 1023px) {
-    /* .menu-icon {
+    .menu-icon {
         display: flex;
-    } */
+    }
 
     .nav-menu, .nav-language{
         display: none;
