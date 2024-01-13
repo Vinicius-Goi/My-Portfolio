@@ -401,15 +401,15 @@ section:nth-child(even){
     }
 
     .container h1{
-        font-size: 25px;
+        font-size: 1rem;
     }
 
     .container p{
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     footer{
-        font-size: 14px;
+        font-size: 14rem;
     }
 
     main p#summary{
