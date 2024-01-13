@@ -99,11 +99,15 @@ function mobileMenu() {
     var menuMobile = document.getElementById('menuMobile');
 
     menuIcon.classList.toggle('active');
-    menuMobile.style.display = (menuMobile.style.display === 'block') ? 'none' : 'block';
-    
+    menuMobile.classList.toggle('active');
+    document.body.style.overflow = menuMobile.classList.contains('active') ? 'hidden' : 'auto';
+
+    var menuMobile = document.getElementById('menuMobile');
+
     setTimeout(function () {
         menuIcon.classList.toggle('transform');
     }, 10);
 }
+
 
 
