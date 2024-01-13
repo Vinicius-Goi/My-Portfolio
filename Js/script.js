@@ -95,10 +95,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function mobileMenu() {
-    var menuMobile = document.getElementById('menuMobile');
     var menuIcon = document.querySelector('.menu-icon');
+    var menuMobile = document.getElementById('menuMobile');
 
-    menuIcon.classList.toggle('active'); // Adiciona ou remove a classe 'active' no ícone do menu
-    menuMobile.style.display = menuIcon.classList.contains('active') ? 'block' : 'none';
+    menuIcon.classList.toggle('active');
+    menuMobile.style.display = (menuMobile.style.display === 'block') ? 'none' : 'block';
 }
+
 
