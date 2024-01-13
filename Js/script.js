@@ -98,9 +98,7 @@ function mobileMenu() {
     var menuMobile = document.getElementById('menuMobile');
     var menuIcon = document.querySelector('.menu-icon');
 
-    if (menuMobile.style.display === 'block' && menuIcon.classList.contains('active')){
-        menuMobile.style.display = 'block';
-    }else{
-        menuMobile.style.display = 'none';
-    }
-};
+    menuIcon.classList.toggle('active'); // Adiciona ou remove a classe 'active' no ícone do menu
+    menuMobile.style.display = menuIcon.classList.contains('active') ? 'block' : 'none';
+}
+
