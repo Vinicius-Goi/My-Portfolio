@@ -2,7 +2,7 @@ var checkbox = document.getElementById('switch-theme');
 var clickbuttonG = document.getElementById('git');
 var clickbuttonI = document.getElementById('insta');
 var clickbuttonL = document.getElementById('linkedin');
-var clickbuttonL = document.getElementById('seta');
+var clickbuttonSeta = document.getElementById('seta');
 
 checkbox.addEventListener('change', function() {
     localStorage.setItem('checkboxState', checkbox.checked);
@@ -60,7 +60,7 @@ clickbuttonI.addEventListener('click', function irInsta(){
 });
 
 clickbuttonL.addEventListener('click', function irLinkedin(){
-    window.open('https://www.linkedin.com/in/vin%C3%ADcius-goi-sanchez-b33209296/', '_blank');
+    window.open('https://www.linkedin.com/in/vinícius-goi-sanchez-b33209296', '_blank');
 });
 
 function irSeta() {
@@ -70,15 +70,9 @@ function irSeta() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    var menuIcon = document.querySelector('.menu-icon');
-
-    menuIcon.addEventListener('click', function(){
-        menuIcon.classList.toggle('active');
-    })
-})
-
-document.addEventListener('DOMContentLoaded', function() {
     var scrollLinks = document.querySelectorAll('.scroll-link');
+    var menuIcon = document.querySelector('.menu-icon');
+    var statusCheckbox = document.getElementById('checkbox');
 
     scrollLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
@@ -89,25 +83,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
             targetSection.scrollIntoView({ behavior: "smooth" });
 
-            menuMobile.style.display = 'none';
+            // Esconde o menu mobile após clicar em uma opção
+            statusCheckbox.checked = false;
+            menuIcon.classList.remove('active');
         });
     });
 });
 
+
 function mobileMenu() {
+    var root = document.documentElement;
+    var statusCheckbox = document.getElementById('checkbox');
+    var menuMobile = document.getElementById('menuMobile');
     var menuIcon = document.querySelector('.menu-icon');
-    var menuMobile = document.getElementById('menuMobile');
 
-    menuIcon.classList.toggle('active');
-    menuMobile.classList.toggle('active');
-    document.body.style.overflow = menuMobile.classList.contains('active') ? 'hidden' : 'auto';
+    if (statusCheckbox.checked) {
+        root.style.setProperty('--menu-mobile-display', 'block');
+        menuIcon.classList.add('active');
+    } else {
+        root.style.setProperty('--menu-mobile-display', 'none');
+        menuIcon.classList.remove('active');
+    }
 
-    var menuMobile = document.getElementById('menuMobile');
-
-    setTimeout(function () {
-        menuIcon.classList.toggle('transform');
-    }, 10);
+    menuMobile.addEventListener('click', function () {
+        root.style.setProperty('--menu-mobile-display', 'none');
+        menuIcon.classList.remove('active');
+        statusCheckbox.checked = false;
+    });
 }
-
-
-
