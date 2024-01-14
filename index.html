@@ -98,7 +98,23 @@
 
         </section>
         <section id="contact" class="contact">
-            
+            <div class="form-contact">
+                <h1>Contact Me</h1>
+                <form action="https://api.staticforms.xyz/submit" method="POST">
+                    <div class="name">
+                        <input type="text" id="name" placeholder="Enter your name" autocomplete="off" required>
+                    </div>
+                    <div class="email">
+                        <input type="email" id="email" placeholder="Enter your email" autocomplete="off" required>
+                    </div>
+                    <div class="message">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn">Submit</button>
+
+                    <input type="hidden" name="accessKey" value="9bb7dca8-c005-43af-94ac-8c899b47b202">
+                </form>
+            </div>
         </section>
     </main>
     <footer id="rodape">

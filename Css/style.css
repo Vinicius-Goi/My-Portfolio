@@ -72,10 +72,6 @@ a{
     justify-content: center;
 }
 
-.menu-icon:hover{
-    background: #5c6bc0ff;
-}
-
 #checkbox {
     display: none;
   }
@@ -337,7 +333,6 @@ menu a {
     text-align: center;
     justify-content: center;
     align-items: center;
-    text-align: center;
     display: flex;
     flex-direction: column;
 }
@@ -431,6 +426,67 @@ section:nth-child(even){
     background-size: cover;
 }
 
+.contact{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Monteserrat', sans-serif;
+    min-height: 100svh;
+}
+
+.form-contact{
+    background: var(--other-bg-color);
+    box-shadow: 15px 15px 15px -3px rgba(0,0,0,0.1);
+    width: 625px;
+    border-radius: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.contact h1{
+    font-size: 2.5rem;
+    margin: 25px;
+}
+
+.name, .email, .message{
+    color: var(--str-color);
+    margin-bottom: 10px;
+}
+
+input, textarea{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    transition: all 0.5s;
+    background: var(--other-bg-color);
+    border: 0.5px solid var(--str-color);
+    color: var(--str-color);
+}
+
+input:focus, textarea:focus{
+    border-radius: 10px;
+}
+
+#submit-btn{
+    padding: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    border-radius: 5px;
+    color: var(--str-color);
+    cursor: pointer;
+    transition: all 0.5s;
+    background: transparent;
+    border: 1px solid var(--str-color);
+}
+
+#submit-btn:hover{
+    background: #5c6bc0ff;
+    border: none;
+}
+
 @media screen and (max-width: 1023px) {
     .menu-icon {
         display: flex;
@@ -449,11 +505,11 @@ section:nth-child(even){
     }
 
     .container-home h1{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .container-home p{
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     footer{
