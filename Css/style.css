@@ -558,7 +558,7 @@ input:focus, textarea:focus{
 
 @media screen and (max-width: 767px){
     .form-contact{
-        width: 300px;
+        width: 305px;
     }
 
     .contact h1{
