@@ -1,7 +1,7 @@
 :root{
     --bg-color: #fff;
     --str-color: #000;
-    --nav-menu-color: #727272;
+    --nav-menu-color: #DDD;
     --github: url('../src/github.svg');
     --insta: url('../src/insta.svg');
     --linkedin: url('../src/linkedin.svg');
@@ -450,11 +450,6 @@ section:nth-child(even){
     margin: 25px;
 }
 
-.name, .email, .message{
-    color: var(--str-color);
-    margin-bottom: 10px;
-}
-
 input, textarea{
     width: 100%;
     border-radius: 5px;
@@ -464,6 +459,8 @@ input, textarea{
     background: var(--other-bg-color);
     border: 0.5px solid var(--str-color);
     color: var(--str-color);
+    color: var(--str-color);
+    margin-bottom: 10px;
 }
 
 input:focus, textarea:focus{
