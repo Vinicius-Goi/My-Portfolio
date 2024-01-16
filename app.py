@@ -46,7 +46,7 @@ def send():
             recipients= ['goisanchezvinicius@gmail.com', app.config.get("MAIL_USERNAME")],
             body = f'''
 
-            {formContato.nome} usando o email {formContato.email}, te enviou algo às <b>{datetime.now().strftime("%H:%M")}</b> no dia <b>{datetime.now().strftime("%d/%m/%Y")}</b>
+            {formContato.nome} usando o email {formContato.email}, te enviou algo às {datetime.now().strftime("%H:%M")} no dia {datetime.now().strftime("%d/%m/%Y")}
             Mensagem:
 
             {formContato.mensagem}

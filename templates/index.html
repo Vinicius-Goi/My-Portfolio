@@ -104,8 +104,10 @@
                         <input type="text" name="nome" placeholder="Enter your name" autocomplete="off" required>
                         <input type="email" name="email" placeholder="Enter your email" autocomplete="off" required>
                         <textarea name="mensagem" cols="30" rows="10" placeholder="Enter your message" required></textarea>
-                    <button type="submit" id="submit-btn">Submit</button>   
-
+                    <button type="submit" id="submit-btn"><span id="text_btn">Submit</span></button>
+                    <span id="submit-btn-loading">
+                        <span class="loading"></span><span id="text_btn">Submitting...</span>
+                    </span>
                 </form>
             </div>
         </section>
