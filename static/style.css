@@ -521,8 +521,6 @@ input:focus, textarea:focus{
 }
 
 .alert{
-    position: fixed;
-    bottom: 50px;
     z-index: 1;
     display: flex;
     justify-content: center;
