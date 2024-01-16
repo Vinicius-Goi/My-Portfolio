@@ -440,6 +440,7 @@ section:nth-child(even){
     background: var(--other-bg-color);
     box-shadow: 15px 15px 15px -3px rgba(0,0,0,0.1);
     width: 625px;
+    height: 530px;
     border-radius: 10px;
     padding-left: 50px;
     padding-right: 50px;
@@ -517,6 +518,44 @@ input:focus, textarea:focus{
 #submit-btn:hover{
     background: #5c6bc0ff;
     border: none;
+}
+
+.alert{
+    position: fixed;
+    bottom: 50px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a2ffb2;
+    color: #45794d;
+    border-radius: 5px;
+    bottom: 750px;
+}
+
+.text_alert{
+    font-size: 0.85rem;
+}
+
+#exit-btn{
+    width: 25px;
+    height: 25px;
+    background: url("../static/img/X.svg");
+    background-size: cover;
+    border: none;
+    margin-right: 3px;
+}
+
+.alert img{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 25px;
+    margin-right: 2px;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
 }
 
 @media screen and (max-width: 1023px) {
@@ -612,5 +651,14 @@ input:focus, textarea:focus{
 
     100%{
         transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }

@@ -119,3 +119,18 @@ btnSubmit.addEventListener("click", ()=>{
     btnSubmitLoading.style.display = "flex";
     btnSubmit.style.display = "none"
 })
+
+const btnExit = document.querySelector('#exit-btn')
+const alertLabel = document.querySelector('#alert-lbl')
+
+btnExit.addEventListener("click", ()=>{
+    alertLabel.style.display = "none";
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    var alertElement = document.querySelector('.alert');
+
+    setTimeout(function() {
+        alertElement.classList.add('fade-out');
+    }, 3000);
+});
