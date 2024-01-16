@@ -35,9 +35,9 @@ def index():
 def send():
     if request.method == 'POST':
         formContato = Contato(
-            request.form["name"],
+            request.form["nome"],
             request.form["email"],
-            request.form["message"]
+            request.form["mensagem"]
         )
 
         msg = Message(
