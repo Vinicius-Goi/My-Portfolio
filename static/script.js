@@ -111,3 +111,11 @@ function mobileMenu() {
         statusCheckbox.checked = false;
     });
 }
+
+const btnSubmit = document.querySelector('#submit-btn')
+const btnSubmitLoading = document.querySelector('#submit-btn-loading')
+
+btnSubmit.addEventListener("click", ()=>{
+    btnSubmitLoading.style.display = "flex";
+    btnSubmit.style.display = "none"
+})

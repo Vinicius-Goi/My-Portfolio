@@ -503,7 +503,7 @@ input:focus, textarea:focus{
 #submit-btn-loading{
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: none;
     background-color: rgb(122, 132, 187);
     padding: 10px;
     margin-bottom: 25px;
