@@ -14,7 +14,7 @@ I changed the size of the theme switch to be a little bigger and started taking 
 Day 12/30
 While I create the "about" section I am taking care of the responsiveness of the site as a whole, I have also created the other sections (projects, blog, contact). And I added more details in purple to the website, to highlight some things in my life, such as desires, experiences, etc.
 
-12/31, 01/01 and 01/02
+Day 12/31, 01/01 and 01/02
 Break.
 
 Day 01/03
