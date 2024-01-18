@@ -1,0 +1,115 @@
+:root {
+    --bg-color: #fff;
+    --str-color: #000;
+    --sun-visible: visible;
+    --moon-visible: hidden;
+    --trilho-color: #a0a0a0;
+    --bar-color: #bbbbbb;
+    --other-bg-color: #e0e0e0;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    width: 100dvw;
+}
+
+main{
+    color: var(--str-color);
+}
+
+/* Switch Theme*/
+
+.switch-theme{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sun {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    transition: 0.1s ease-in-out;
+    visibility: var(--sun-visible);
+}
+
+.moon {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 10px;
+    left: 40.5px;
+    transition: 0.1s ease-in-out;
+    visibility: var(--moon-visible);
+}
+
+label {
+    display: flex;
+    position: relative;
+    width: 64px;
+    height: 32px;
+    cursor: pointer;
+}
+
+label input {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+}
+
+label span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d1d1d1;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+label input:checked~span {
+    background: #5C5C5C;
+}
+
+label span i {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 24px;
+    height: 24px;
+    background: #ffff;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+label input:checked~span i {
+    left: 35px;
+    background: #353535;
+}
+
+/*Scroll Bar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--trilho-color);
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--bar-color);
+}
