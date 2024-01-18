@@ -31,6 +31,18 @@ class Contato:
 def index():
     return render_template('index.html')
 
+@app.route('/blog_py.html')
+def blog_py():
+    return render_template('blog_py.html')
+
+@app.route('/blog_pc.html')
+def blog_pc():
+    return render_template('blog_pc.html')
+
+@app.route('/blog_setup.html')
+def blog_setup():
+    return render_template('blog_setup.html')
+
 @app.route('/send', methods=['GET', 'POST'])
 def send():
     if request.method == 'POST':
