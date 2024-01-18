@@ -69,5 +69,7 @@ def send():
         flash('Email enviado com sucesso!')
     return redirect('/')
 
+
+
 if __name__ == '__main__':
     app.run(debug=True)

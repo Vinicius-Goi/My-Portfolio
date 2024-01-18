@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/style_py.css">
     <title>Blog.py</title>
+
+    <script src="https://unpkg.com/xterm@4.15.0/dist/xterm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3.10.1/brython.js"></script>
 </head>
+
 <body>
     <div class="switch-theme">
         <label>
@@ -18,8 +23,32 @@
         </label>
     </div>
     <main>
+        <div id="terminal-container"></div>
 
+        <script>
+            // Configurar o terminal
+            const term = new Terminal();
+            term.open(document.getElementById('terminal-container'));
+        
+            // Configurar o Brython
+            function runPythonCode(code) {
+                Brython.run_script(code);
+            }
+        
+            // Adicionar um evento ao pressionar Enter no terminal
+            term.onKey(e => {
+                if (e.domEvent.keyCode === 13) {  // Tecla Enter
+                    const code = term.buffer.getLine(term.buffer.cursorY).translateToString();
+                    runPythonCode(code);
+                    term.writeln('\r\n');
+                }
+            });
+        </script>
+        
     </main>
 </body>
+
+
 <script src="../static/script_blog.js"></script>
+
 </html>

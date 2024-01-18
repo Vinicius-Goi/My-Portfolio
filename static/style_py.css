@@ -113,3 +113,7 @@ label input:checked~span i {
     border-radius: 5px;
     background-color: var(--bar-color);
 }
+
+#terminal{
+    color: var(--str-color);
+}
