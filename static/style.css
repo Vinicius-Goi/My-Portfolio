@@ -718,8 +718,6 @@ textarea:focus {
     .posts:hover {
         width: 275px;
         height: 425px;
-        color: #5c6bc0ff;
-    
     }
     
     .posts:hover img,
