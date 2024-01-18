@@ -556,6 +556,27 @@ input:focus, textarea:focus{
     animation: fadeOut 0.5s ease-out forwards;
 }
 
+.blog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.posts{
+    width: 300px;
+    height: 450px;
+    background: var(--border-img-color);
+    border-radius: 50px;
+}
+
+.blog img{
+    width: 300px;
+    height: 215px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 1023px) {
     .menu-icon {
         display: flex;
