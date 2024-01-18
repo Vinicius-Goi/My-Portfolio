@@ -42,7 +42,10 @@ Day 01/16
 First thing in the morning, I watched the video in full to understand how the flask works and the other functions that were used, and then I started replicating the video and making some changes so I could have greater security, as this requires me to put my password and email in the file, I took care of the responsiveness and the sent email notification box, but while in the video he used bootstrap, I used css myself, watched videos, did it on my own and so on... And today I I actually noticed the difference that these types of projects make in your life.
 
 Day 01/17
-I decided to start leaving these reports in the repository description of my portfolio.
+I decided to start leaving these reports in the repository description of my portfolio and later I started making posts.
+
+Day 01/18
+In less than 1 hour I managed to do all the missing CSS for the blog section. It may not seem like it, but for me this means a lot, because it shows my evolution with CSS and html.
 
 ---
 # Meu-Portfólio
@@ -89,5 +92,8 @@ Dia 16/01
 Logo pela manhã, vi o video na integra para entender como funciona o flask e as outras funções que foram utilizadas, e dps eu comecei a replicar o video e fazendo algumas alterações para eu ter maior segurança, por conta que isso requer q eu coloque minha senha e email no arquivo, dps cuidei da responsividade e da caixa de aviso de email enviado, porém enquanto no video ele usava bootstrap, eu usei o css msm, assisti videos, fiz por conta própria e por vai... E hj eu de fato percebi a diferença que esses tipos de projetos causam na sua vida.
 
 Dia 17/01
-Resolvi começar a deixar esses relatórios na descrição do repositório do meu portfolio.
+Resolvi começar a deixar esses relatórios na descrição do repositório do meu portfolio e mais tarde comecei a fazer os posts.
+
+Dia 18/01
+Em menos de 1h consegui fazer todo o CSS que faltava da seção blog, Pode não parecer, mas para mim isso significa muito, até pq isso mostra minha evolução com CSS e html.
 ​
