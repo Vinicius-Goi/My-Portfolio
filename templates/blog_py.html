@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="../static/style_py.css">
     <title>Blog.py</title>
 
+    <!-- Incluir folha de estilo do xterm.js -->
+    <link rel="stylesheet" href="https://unpkg.com/xterm@4.15.0/dist/xterm.css" />
+    <!-- Incluir scripts do xterm.js e Brython -->
     <script src="https://unpkg.com/xterm@4.15.0/dist/xterm.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/brython@3.10.1/brython.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.1/brython.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.1/brython_stdlib.js"></script>
+
 </head>
 
 <body>
@@ -23,31 +28,30 @@
         </label>
     </div>
     <main>
-        <div id="terminal-container"></div>
+        <div id="terminal"></div>
 
         <script>
             // Configurar o terminal
             const term = new Terminal();
-            term.open(document.getElementById('terminal-container'));
-        
+            term.open(document.getElementById('terminal'));
+
             // Configurar o Brython
             function runPythonCode(code) {
                 Brython.run_script(code);
             }
-        
+
             // Adicionar um evento ao pressionar Enter no terminal
-            term.onKey(e => {
-                if (e.domEvent.keyCode === 13) {  // Tecla Enter
+            term.onData(e => {
+                if (e === '\r') {  // Enter key
                     const code = term.buffer.getLine(term.buffer.cursorY).translateToString();
                     runPythonCode(code);
-                    term.writeln('\r\n');
+                    term.write('\r\n');
                 }
             });
         </script>
-        
+
     </main>
 </body>
-
 
 <script src="../static/script_blog.js"></script>
 
