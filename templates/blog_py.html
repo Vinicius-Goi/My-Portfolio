@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/xterm.css" />
     <link rel="stylesheet" href="../static/style_py.css">
+
     <title>Blog.py</title>
 
-    <!-- Incluir folha de estilo do xterm.js -->
-    <link rel="stylesheet" href="https://unpkg.com/xterm@4.15.0/dist/xterm.css" />
-    <!-- Incluir scripts do xterm.js e Brython -->
-    <script src="https://unpkg.com/xterm@4.15.0/dist/xterm.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.1/brython.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.1/brython_stdlib.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.2/brython.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.2/brython_stdlib.min.js"></script>
+    <script src="../static/xterm.js"></script>
+
 
 </head>
 
 <body>
+    <div id="terminal"></div>
+
+
+
     <div class="switch-theme">
         <label>
             <input type="checkbox" id="switch-theme" onclick="changeTheme()" style="display: none;">
@@ -28,31 +32,36 @@
         </label>
     </div>
     <main>
-        <div id="terminal"></div>
-
-        <script>
-            // Configurar o terminal
-            const term = new Terminal();
-            term.open(document.getElementById('terminal'));
-
-            // Configurar o Brython
-            function runPythonCode(code) {
-                Brython.run_script(code);
-            }
-
-            // Adicionar um evento ao pressionar Enter no terminal
-            term.onData(e => {
-                if (e === '\r') {  // Enter key
-                    const code = term.buffer.getLine(term.buffer.cursorY).translateToString();
-                    runPythonCode(code);
-                    term.write('\r\n');
-                }
-            });
-        </script>
 
     </main>
-</body>
+    <script>
+        var term = new Terminal();
+        term.open(document.getElementById('terminal'));
 
-<script src="../static/script_blog.js"></script>
+        Brython({
+            debug: true,
+            sys_argv: ['']
+        });
+
+        term.onKey((e) => {
+            const printable = !e.domEvent.altKey && !e.domEvent.ctrlKey && !e.domEvent.metaKey;
+
+            if (e.domEvent.keyCode === 13) {  // Tecla Enter
+                const code = term.buffer.getLine(term.buffer.cursorY).translateToString();
+                runPythonCode(code);
+                term.writeln('\r\n');
+            } else if (e.domEvent.keyCode === 8) {  // Tecla Backspace
+                term.write('\b \b');
+            } else if (printable) {
+                term.write(e.key);
+            }
+        });
+
+        function runPythonCode(code) {
+            Brython.run_script(code);
+        }
+    </script>
+    <script src="../static/script_blog.js"></script>
+</body>
 
 </html>

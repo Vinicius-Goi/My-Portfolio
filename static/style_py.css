@@ -115,5 +115,7 @@ label input:checked~span i {
 }
 
 #terminal{
-    color: var(--str-color);
+    width: 100svw;
+    height: 50svh;
+    border: 1px solid var(--str-color);
 }
