@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../static/xterm.css" />
     <link rel="stylesheet" href="../static/style_py.css">
 
@@ -17,10 +20,6 @@
 </head>
 
 <body>
-    <div id="terminal"></div>
-
-
-
     <div class="switch-theme">
         <label>
             <input type="checkbox" id="switch-theme" onclick="changeTheme()" style="display: none;">
@@ -32,35 +31,18 @@
         </label>
     </div>
     <main>
+        <section id="oque_e_python">
 
+            <div class="title">
+                <img src="../static/img/python_image.jpg" class="image_title">
+                <span class="opacity-box"></span>
+            </div>
+            <div class="text_python">
+                <h1>O que é python?</h1>
+            </div> 
+
+        </section>
     </main>
-    <script>
-        var term = new Terminal();
-        term.open(document.getElementById('terminal'));
-
-        Brython({
-            debug: true,
-            sys_argv: ['']
-        });
-
-        term.onKey((e) => {
-            const printable = !e.domEvent.altKey && !e.domEvent.ctrlKey && !e.domEvent.metaKey;
-
-            if (e.domEvent.keyCode === 13) {  // Tecla Enter
-                const code = term.buffer.getLine(term.buffer.cursorY).translateToString();
-                runPythonCode(code);
-                term.writeln('\r\n');
-            } else if (e.domEvent.keyCode === 8) {  // Tecla Backspace
-                term.write('\b \b');
-            } else if (printable) {
-                term.write(e.key);
-            }
-        });
-
-        function runPythonCode(code) {
-            Brython.run_script(code);
-        }
-    </script>
     <script src="../static/script_blog.js"></script>
 </body>
 

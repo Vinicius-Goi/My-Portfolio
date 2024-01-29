@@ -112,12 +112,20 @@ function mobileMenu() {
     });
 }
 
+
 const btnSubmit = document.querySelector('#submit-btn')
 const btnSubmitLoading = document.querySelector('#submit-btn-loading')
 
 btnSubmit.addEventListener("click", ()=>{
-    btnSubmitLoading.style.display = "flex";
-    btnSubmit.style.display = "none"
+    var valorInputNome = document.getElementById("nome").value;
+    var valorInputEmail = document.getElementById("email").value;
+    var valorInputMsg = document.getElementById("mensagem").value;
+
+
+    if (valorInputNome.trim() !== '' && valorInputEmail.trim() !== '' && valorInputMsg.trim() !== ''){
+        btnSubmitLoading.style.display = "flex";
+        btnSubmit.style.display = "none"
+    }
 })
 
 const btnExit = document.querySelector('#exit-btn')

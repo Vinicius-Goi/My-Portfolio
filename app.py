@@ -55,7 +55,7 @@ def send():
         msg = Message(
             subject= f"{formContato.nome} te enviou um email pelo portfólio",
             sender= app.config.get("MAIL_USERNAME"),
-            recipients= ['goisanchezvinicius@gmail.com', app.config.get("MAIL_USERNAME")],
+            recipients= [app.config.get("MAIL_USERNAME")],
             body = f'''
 
             {formContato.nome} usando o email {formContato.email}, te enviou algo às {datetime.now().strftime("%H:%M")} no dia {datetime.now().strftime("%d/%m/%Y")}
