@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Vinícius Goi</title>
+    <title id="title">Portfolio | Vinícius Goi</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
@@ -36,11 +36,11 @@
                 </div>
             </div>
             <div class="nav-menu">
-                <a href="#home" data-target="home" class="scroll-link">Home</a>
-                <a href="#about" data-target="about" class="scroll-link">About</a>
-                <a href="#projects" data-target="projects" class="scroll-link">Projects</a>
-                <a href="#blog" data-target="blog" class="scroll-link">Blog</a>
-                <a href="#contact" data-target="contact" class="scroll-link">Contact</a>
+                <a href="#home" id="home" data-target="home" class="scroll-link">Home</a>
+                <a href="#about" id="about" data-target="about" class="scroll-link">About</a>
+                <a href="#projects" id="projects" data-target="projects" class="scroll-link">Projects</a>
+                <a href="#blog" id="blog" data-target="blog" class="scroll-link">Blog</a>
+                <a href="#contact" id="contact" data-target="contact" class="scroll-link">Contact</a>
             </div>
             <div class="nav-language">
                 <a>EN</a>
@@ -63,11 +63,11 @@
             <a>EN</a>
             <a>PT-BR</a>
         </div>
-        <a href="#home" data-target="home" class="scroll-link">Home</a>
-        <a href="#about" data-target="about" class="scroll-link">About</a>
-        <a href="#projects" data-target="projects" class="scroll-link">Projects</a>
-        <a href="#blog" data-target="blog" class="scroll-link">Blog</a>
-        <a href="#contact" data-target="contact" class="scroll-link">Contact</a>
+        <a href="#home" id="home" data-target="home" class="scroll-link">Home</a>
+        <a href="#about" id="about" data-target="about" class="scroll-link">About</a>
+        <a href="#projects" id="projects" data-target="projects" class="scroll-link">Projects</a>
+        <a href="#blog" id="blog" data-target="blog" class="scroll-link">Blog</a>
+        <a href="#contact" id="contact" data-target="contact" class="scroll-link">Contact</a>
     </menu>
     <main>
         <section id="home" class="home">
@@ -84,7 +84,7 @@
             {% endwith %}
             <div class="container-home">
                 <div class="text">
-                    <p>Hi 🖖, I'm</p>
+                    <p id="hi">Hi 🖖, I'm</p>
                     <h1>Vinícius Goi Sanchez!</h1>
                     <p id="summary">I'm a <span style="color:#5c6bc0ff;">web programmer</span> and fascinated by <span
                             style="color: #5c6bc0ff;">hardware and software</span>, as well as a great love for <span
@@ -104,22 +104,22 @@
                 <img src="../static/img/Placeholder_photo.jpg">
             </div>
             <div class="about-div">
-                <p>Since before I studied programming, I have always been <span style="color: #5c6bc0ff;">fascinated by
+                <p id="about-textOne">Since before I studied programming, I have always been <span style="color: #5c6bc0ff;">fascinated by
                         information technology in general, but especially hardware</span>. In 2020, a friend of mine
                     introduced me to a programming language, that language was Python and since then my goal has always
                     been to work with software or hardware.</p><br>
-                <P>I also have a <span style="color: #5c6bc0ff;">huge passion for design</span> and <span
+                <p id="about-textTwo">I also have a <span style="color: #5c6bc0ff;">huge passion for design</span> and <span
                         style="color: #5c6bc0ff;">I want to learn other languages such as Italian and Japanese in
-                        addition to improving my English</span>.</P>
+                        addition to improving my English</span>.</p>
             </div>
         </section>
         <section id="projects" class="projects">
 
         </section>
         <section id="blog" class="blog">
-            <a href="blog_py.html"><span class="posts"><img src="../static/img/python_image.jpg"><span class="opacity-box"></span><span class="text_posts">Tudo o que você precisa saber de python básico estará aqui! Da forma mais informativa e interessante possível. Vou ensinar desde a instalação até passar algumas lições de fixação sobre o conteúdo.</span></span></a>
-            <a href="blog_setup.html"><span class="posts"><img src="../static/img/setup_image.jpg"><span class="opacity-box"></span><span class="text_posts">Quer saber mais sobre periféricos? Aqui está o guia! Desde conhecimentos básicos, até medianos. Vou te ensinar a escolher o periférico que mais se encaixa para a sua situação.</span></span></a>
-            <a href="blog_pc.html"><span class="posts"><img src="../static/img/pc_image.jpg"><span class="opacity-box"></span><span class="text_posts">Monte seu computador ideal com nosso guia abrangente, explorando o propósito de cada componente para decisões informadas na compra de peças personalizadas.</span></span></a>
+            <a href="blog_py.html"><span class="posts"><img src="../static/img/python_image.jpg"><span class="opacity-box"></span><span class="text_posts"><p>Tudo o que você precisa saber de python básico estará aqui! Da forma mais informativa e interessante possível. Vou ensinar desde a instalação até passar algumas lições de fixação sobre o conteúdo.</p></span></span></a>
+            <a href="blog_setup.html"><span class="posts"><img src="../static/img/setup_image.jpg"><span class="opacity-box"></span><span class="text_posts"><p>Quer saber mais sobre periféricos? Aqui está o guia! Desde conhecimentos básicos, até medianos. Vou te ensinar a escolher o periférico que mais se encaixa para a sua situação.</p></span></span></a>
+            <a href="blog_pc.html"><span class="posts"><img src="../static/img/pc_image.jpg"><span class="opacity-box"></span><span class="text_posts"><p>Monte seu computador ideal com nosso guia abrangente, explorando o propósito de cada componente para decisões informadas na compra de peças personalizadas.</p></span></span></a>
         </section>
         <section id="contact" class="contact">
             <div class="form-contact">
@@ -142,5 +142,6 @@
     </footer>
 </body>
 <script src="../static/script.js"></script>
+<script src="../static/data/translation.json"></script>
 
 </html>

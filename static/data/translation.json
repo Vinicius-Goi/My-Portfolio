@@ -1,0 +1,22 @@
+{
+    "pt-br": {
+        "title": "Portifólio | Vinícius Goi",
+        "home": "Início",
+        "about": "Sobre",
+        "projects": "Projetos",
+        "blog": "Blog",
+        "contact": "Contato",
+        "hi": "Olá 🖖, eu sou",
+        "summary": "Sou um <span style='color:#5c6bc0ff;'>programador web</span> facinado por <span
+        style='color: #5c6bc0ff;'>hardware e software</span>, além de um grande amor por <span
+        style='color: #5c6bc0ff;'>design e languagens</span>.",
+    },
+    "en": {
+        "title": "Portifólio | Vinícius Goi",
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "blog": "Blog",
+        "contact": "Contact",
+    }
+}
